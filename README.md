@@ -1,4 +1,4 @@
-# final_project
+# 🤖 final_project
 This repository contains all the packages I have created or modified to run my final robotics lab project. Make sure to also have the standard aruco ros package to detect aruco markers.
 
 This project simulates the enviroment of an automatized cafeteria.
