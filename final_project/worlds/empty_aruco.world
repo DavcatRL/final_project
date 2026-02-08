@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <!-- We use a custom world for the rrbot so that the camera angle is launched correctly -->
+
+  <world name="default">
+    <!-- Included light -->
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun</uri>
+    </include>
+ 
+    <!-- Included model -->
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ground Plane</uri>
+    </include>
+
+    <include>
+      <uri>
+        model://arucotag1
+      </uri>
+      <name>arucotag1</name>
+      <pose>0.6105 1.1746 0.328 1.5708 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>
+        model://arucotag2
+      </uri>
+      <name>arucotag2</name>
+      <pose>0.6105 -1.1746 0.328 -1.5708 0 0</pose>
+    </include>
+
+  </world>
+</sdf>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>final_project</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="user@todo.todo">user</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <exec_depend>ros2launch</exec_depend>
+  <exec_depend>ros2_kdl_package</exec_depend>
+  <exec_depend>iiwa_description</exec_depend>
+  <exec_depend>ros2_fra2mo</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>aruco_ros</exec_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  
+  <depend>rclcpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>ros_gz_interfaces</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>gazebo_ros</depend>
+  <depend>ros2_package_interfaces</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+    <gazebo_ros gazebo_model_path="${prefix}/models"/>
+  </export>
+</package>

@@ -1,0 +1,137 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <!-- We use a custom world for the rrbot so that the camera angle is launched correctly -->
+
+  <world name="default">
+    <!-- Included light -->
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun</uri>
+    </include>
+ 
+    <!-- Included model -->
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ground Plane</uri>
+    </include>
+
+    <include>
+      <uri>
+        model://arucotag1
+      </uri>
+      <name>arucotag1</name>
+      <pose>0.52 0.96 1.01 1.5708 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>
+        model://arucotag2
+      </uri>
+      <name>arucotag2</name>
+      <pose>0.67 0.96 1.14 1.5708 0 0</pose>
+    </include>
+    
+    <include>
+      <uri> 
+        model://table 
+      </uri> 
+      <name>table1</name> 
+      <pose>-2 1 0 0 0 0</pose> 
+    </include> 
+    
+    <include> 
+      <uri> 
+        model://table 
+      </uri> 
+      <name>table2</name> 
+      <pose>-1 -2 0 0 0 0</pose> 
+    </include>
+    
+    <include> 
+      <uri> 
+        model://counter 
+      </uri> 
+      <name>counter</name> 
+      <pose>0.9 0 0 0 0 0</pose> 
+    </include>
+
+    <model name="structure">
+      <static>true</static>
+      
+      <link name="walls">
+        
+        <visual name="wall_south_visual">
+          <pose>-6.5 0 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.2 10.7 2.5</size>
+            </box>
+          </geometry>
+          <material><ambient>0.9 0.9 0.8 1</ambient><diffuse>0.9 0.9 0.8 1</diffuse></material>
+        </visual>
+        <collision name="wall_south_collision">
+          <pose>-6.5 0 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.2 10.7 2.5</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="wall_north_visual">
+          <pose>4 0 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.2 10.7 2.5</size>
+            </box>
+          </geometry>
+          <material><ambient>0.9 0.9 0.8 1</ambient><diffuse>0.9 0.9 0.8 1</diffuse></material>
+        </visual>
+        <collision name="wall_north_collision">
+          <pose>4 0 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.2 10.7 2.5</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="wall_west_visual">
+          <pose>-1.25 5.35 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>10.7 0.2 2.5</size>
+            </box>
+          </geometry>
+          <material><ambient>0.9 0.9 0.8 1</ambient><diffuse>0.9 0.9 0.8 1</diffuse></material>
+        </visual>
+        <collision name="wall_west_collision">
+          <pose>-1.25 5.35 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>10.7 0.2 2.5</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="wall_est_visual">
+          <pose>-1.25 -5.35 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>10.7 0.2 2.5</size>
+            </box>
+          </geometry>
+          <material><ambient>0.9 0.9 0.8 1</ambient><diffuse>0.9 0.9 0.8 1</diffuse></material>
+        </visual>
+        <collision name="wall_est_collision">
+          <pose>-1.25 -5.35 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>10.7 0.2 2.5</size>
+            </box>
+          </geometry>
+        </collision>
+
+      </link>
+    </model>
+
+  </world>
+</sdf>

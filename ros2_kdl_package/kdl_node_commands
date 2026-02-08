@@ -1,0 +1,3 @@
+ros2 launch final_project iiwa_namespace.launch.py command_interface:="velocity" robot_controller:="velocity_controller"
+
+ros2 run ros2_kdl_package ros2_kdl_node --ros-args -p cmd_interface:=velocity -p ctrl:=velocity_null -p end_position.x:=0.317 -p end_position.y:=0.746 -p end_position.z:=0.328 -p end_position.yaw:=1.28

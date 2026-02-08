@@ -1,0 +1,21 @@
+# Goal
+float64 traj_duration	# durata totale della traiettoria [s]
+float64 x		# target x [m]
+float64 y		# target y [m]
+float64 z		# target z [m]
+float64 yaw		# target yaw [rad]
+---
+
+# Result
+float64 x_f		# final position x [m]
+float64 y_f		# final position y [m]
+float64 z_f		# final position z [m]
+float64 yaw_f		# final orientation yaw [m]
+
+---
+# Feedback
+float64 current_x	# current EE position x [m]
+float64 current_y	# current EE position y [m]
+float64 current_z	# current EE position z [m]
+float64 current_yaw	# current EE orientation yaw [rad]
+float64 advancement	# avanzamento traiettoria [percentage]
